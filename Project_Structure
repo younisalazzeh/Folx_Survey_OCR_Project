@@ -1,0 +1,64 @@
+backend/
+├── app/
+│   ├── __init__.py
+│   ├── main.py                 # FastAPI application entry point
+│   ├── config.py               # Configuration settings
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── routes/
+│   │   │   ├── __init__.py
+│   │   │   ├── upload.py       # Image upload endpoints
+│   │   │   ├── processing.py   # Processing status endpoints
+│   │   │   ├── results.py      # Results retrieval endpoints
+│   │   │   └── export.py       # Export functionality endpoints
+│   │   └── dependencies.py     # API dependencies
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── security.py         # Authentication and security
+│   │   ├── config.py           # Core configuration
+│   │   └── errors.py           # Error handling
+│   ├── db/
+│   │   ├── __init__.py
+│   │   ├── session.py          # Database session management
+│   │   ├── base.py             # Base model class
+│   │   └── models/
+│   │       ├── __init__.py
+│   │       ├── survey.py       # Survey model
+│   │       └── result.py       # Result model
+│   ├── schemas/
+│   │   ├── __init__.py
+│   │   ├── survey.py           # Survey schemas
+│   │   └── result.py           # Result schemas
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── ocr/
+│   │   │   ├── __init__.py
+│   │   │   ├── preprocessing.py # Image preprocessing
+│   │   │   ├── bubble_detection.py # Bubble/checkbox detection
+│   │   │   ├── text_extraction.py # Text OCR
+│   │   │   └── postprocessing.py # OCR result cleanup
+│   │   ├── analysis/
+│   │   │   ├── __init__.py
+│   │   │   ├── data_structuring.py # Structure extracted data
+│   │   │   ├── statistics.py    # Statistical analysis
+│   │   │   └── visualization_data.py # Prepare data for visualization
+│   │   └── rpa/
+│   │       ├── __init__.py
+│   │       ├── scheduler.py     # Task scheduling
+│   │       ├── batch_processor.py # Batch processing
+│   │       └── notifications.py  # Email notifications
+│   └── utils/
+│       ├── __init__.py
+│       ├── file_handling.py     # File operations
+│       ├── image_utils.py       # Image utility functions
+│       └── validation.py        # Data validation
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py              # Test configuration
+│   ├── test_api/                # API tests
+│   ├── test_ocr/                # OCR tests
+│   └── test_analysis/           # Analysis tests
+├── alembic/                     # Database migrations
+├── .env                         # Environment variables
+├── requirements.txt             # Dependencies
+└── Dockerfile                   # Docker configuration
